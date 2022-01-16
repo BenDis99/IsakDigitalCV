@@ -85,7 +85,7 @@ var db = {
     "aboutMe": ["Jeg er gift","elsker programmering og er svært fasinert av datamaskiner."],
     "data":"Jeg er ganske flink med dataprogrammer, har konstruert en flott 3D-tegning av Nordhordlandsbrua, og er generelt sett flink til å sette meg inn i nye programmer. Her har jeg også tegnet deler av en hytte i 3D også. Jeg hjelper også en eldre mann med rådføring og teknisk hjelp innen bruk av dataprogrammer. Har vært tekniker på møter i to kirker, der jeg styrte lyd og/eller tekst, viste filmer og styrte powerpointer (live). Har også drevet med app-utvikling med Android Studio ogXcode på privaten.",
             
-    "kvalifikasjoner":[
+    "qualifications":[
         "Nøyaktig",
         "Pliktoppfyllende",
         "Ansvarsfull",
@@ -94,8 +94,8 @@ var db = {
         "Sosialt utadvendt",
         "Positiv og har godt humør"
     ],
-    "Volleyballspiller": "Jeg har spilt volleyball i rundt 6 år og ble Norgesmester i mixlag for skolelag på VGS i 2016. Var også fast kaptein for Kvernbit sitt juniorlag på Frekhaug hvor jeg også spilte på senior.",
-    "sertifikater": [
+    "sport": "Jeg har spilt volleyball i rundt 6 år og ble Norgesmester i mixlag for skolelag på VGS i 2016. Var også fast kaptein for Kvernbit sitt juniorlag på Frekhaug hvor jeg også spilte på senior.",
+    "sertificates": [
         "Førerkort Klasse B"
     ],
     "about-db": "@Author Isak Hølleland, 16.Jan 2022"
@@ -112,16 +112,24 @@ function getData(i){
             document.getElementById("infospace").innerHTML = writeList(db.xp);
             break;
         case 2:
-            /// About my skills
-            document.getElementById("infospace").innerHTML = "<h3>"+db.xp[0].title+"</h3>";
+            /// About me
+            var str = "";
+            var myAge = getAge();
+            var meLs = "Hei mitt navn er Isak Hølleand og jeg er " + myAge + " år gammel og studerer informatikk.";
+            for(i=0; i<db.aboutMe.length;i++){
+                meLs += "<br>"+db.aboutMe[i];
+            }
+            str += "<h3>" + meLs + "</h3>\n";
+            str += "<h3>" + db.data + "</h3>\n";
+            str += writeSimpleList("Språk",db.languages);
+            str += writeSimpleList("Kvalifikasjoner",db.qualifications);
+            str += writeSimpleList("Sertifikater",db.sertificates);
+            str += writeSimpleList("Volleyball",[db.sport]);
+        
+
+            document.getElementById("infospace").innerHTML = str;
             break;
         case 3:
-            /// About me
-            var myAge = getAge();
-            var meLs = ["Hei mitt navn er Isak Hølleand og jeg er " + myAge + " år gammel og studerer informatikk."];
-            document.getElementById("infospace").innerHTML = writeSimpleList("Litt om meg", meLs);
-            break;
-        case 4:
             /// About my programming skills
             document.getElementById("infospace").innerHTML = writeSimpleList("Programmeringsspråk", db.programmingLanguages);
             break;
@@ -139,11 +147,10 @@ function writeList(ls){
 }
 
 function writeSimpleList(title,ls){
-    var str = "<section><h2>" + title + "</h2>\n";
+    var str = "<h2>" + title + "</h2>\n";
     for(i=0; i < ls.length; i++){
-        str += "<h3>" + ls[i] + "</h3>\n<br>";
+        str += "<h3>" + ls[i] + "</h3>\n";
     }
-    str+="</section>\n<br>";
     return str;
 }
 function getAge(){
