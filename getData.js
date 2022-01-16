@@ -28,8 +28,14 @@ var db = {
         {
             "title": "Grønland bustader", 
             "company": "Alver kommune",
-            "time": "Jan 2020 - Jan 2021", 
+            "time": "Jan 2020 - nå", 
             "info": "Hjalp personer med funksjonshemning i bufelleskap."
+        },
+        {
+            "title": "Støttekontakt", 
+            "company": "Lindås/Alver kommune", 
+            "time": "Aug 2016 - nå", 
+            "info": "Går ut på å aktivisere ungdommer, for å gi de en bedre hverdag."
         },
         {
             "title": "Grønland bustader/Hjemmetjenesten", 
@@ -42,12 +48,6 @@ var db = {
             "company": "Knowit", 
             "time": "Mar 2014", 
             "info": "Under Operasjon dagsverk på ungdomsskolen, var jeg tester i Knowit Bergen og fant noen bugs."
-        },
-        {
-            "title": "Støttekontakt", 
-            "company": "Lindås/Alver kommune", 
-            "time": "Aug 2016 - dags dato", 
-            "info": "Går ut på å aktivisere ungdommer, for å gi de en bedre hverdag."
         },
         {
             "title": "Vara", 
