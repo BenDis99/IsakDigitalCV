@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import client from '../client'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+
+export default function Home(props:any) {
+  const {welcomeInformation} = props;
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +17,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hello world
+          {welcomeInformation.title}
         </h1>
       </main>
 
@@ -31,4 +35,15 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+export async function getServerSideProps() {
+  const welcomeInformation = await client.fetch(
+    `*[_type == "welcomeInformation"][0]`
+  )
+  
+  return {
+    props: {
+      welcomeInformation,
+    },
+  }
 }
