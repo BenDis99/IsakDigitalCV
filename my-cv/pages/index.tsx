@@ -2,11 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import client from '../client'
 import styles from '../styles/Home.module.css'
+import CvField from "../components/cvField";
 
 
 
-export default function Home(props:any) {
-  const {welcomeInformation} = props;
+export default function Home(props:{welcomeInformation : any, jobs : any[]}) {
+  const {welcomeInformation, jobs} = props;
   return (
     <div className={styles.container}>
       <Head>
@@ -19,6 +20,9 @@ export default function Home(props:any) {
         <h1 className={styles.title}>
           {welcomeInformation.title}
         </h1>
+        <div>
+          {jobs.map((item:any) => (<CvField job={item}/>))}
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -40,10 +44,14 @@ export async function getServerSideProps() {
   const welcomeInformation = await client.fetch(
     `*[_type == "welcomeInformation"][0]`
   )
+  const jobs : any[] = await client.fetch(
+    `*[_type == "jobInformation"]`
+  )
   
   return {
     props: {
       welcomeInformation,
+      jobs
     },
   }
 }
