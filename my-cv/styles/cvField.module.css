@@ -1,0 +1,15 @@
+.cv_field {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.cv_field_job {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0;
+}
