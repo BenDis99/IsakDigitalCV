@@ -4,34 +4,28 @@
         <title>Isak Hølleland CV</title>
         <link rel="stylesheet" type="text/css" href="app.css">
         <meta charset="UTF-8"><meta>
-        <script src="getData.js"></script>
-        
-        
-        
+        <script src="getData.js" defer type="module"></script>
     </head>
-    <body onload="getData(0)">
-        <h1>Hei, mitt navn er Isak Hølleland</h1>
+    <body>
+        <div class="content">
+            <h1>Hei, mitt navn er Isak Hølleland</h1>
 
-        <section id="cvCard">
-            <img src="me.png">
-            <section id="kortInfo">
-                <h2>Isak Hølleland</h2>
-                <h3>Løypetona 130, 5918 Frekhaug</h3>
-                <h3>+47 91857838 | <a href = "mailto:iholleland@gmail.com">iholleland@gmail.com</a></h3>
-                <h3><a href="https://www.linkedin.com/in/isak-hølleland-53a2a01b7" target="_blank">LinkedIn</a></h3>
-                <h3><a href="https://github.com/BenDis99" target="_blank">GitHub</a></h3>
-            </section> 
-        </section>
+            <div class="cvCard">
+                <img src="me.png">
+                <div class="kortInfo">
+                    <h2>Isak Hølleland</h2>
+                    <h3>Løypetona 130, 5918 Frekhaug</h3>
+                    <h3>+47 91857838 | <a href = "mailto:iholleland@gmail.com">iholleland@gmail.com</a></h3>
+                    <h3><a href="https://www.linkedin.com/in/isak-hølleland-53a2a01b7" target="_blank">LinkedIn</a></h3>
+                    <h3><a href="https://github.com/BenDis99" target="_blank">GitHub</a></h3>
+                </div>
+            </div>
+            
+            <div id="category_buttons"></div>
 
-        <button onclick="getData(0)" type="button" value="button">Utdanning</button>
-        <button onclick="getData(1)" type="button" value="button">Jobb</button>
-        <button onclick="getData(3)" type="button" value="button">Programmeringsspråk</button>
-        <button onclick="getData(2)" type="button" value="button">Om meg</button>
-
-        <p id="infospace"></p>
-        <script src=getData.js>getData(0)</script>
-        <h1><br><br><br></h1>
-        <h5 id="bottom">Nettside skrevet av Isak Hølleland</h5>
+            <div id="infospace"></div>
+        </div>
+        <h3 id="bottom">Nettside skrevet av Isak Hølleland</h3>
 
     </body>
     
