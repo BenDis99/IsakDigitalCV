@@ -1,24 +1,44 @@
 h1 {
     color: black;
 }
+
 body {
     margin:0;
     padding:0;
-    background-color: #44c767;
+    background-color: rgba(45, 135, 46, 0.774);
 }
-.content {
+header{
+    position:fixed;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(45, 135, 46, 0.774);
+}
+nav {
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     min-height: 95vh;
     background-color: white;
     padding-bottom: 3rem;
+    padding-top: 75px;
 }
 
 .cvCard {
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 50vw;
+}
+.cvCard_content {
+    display: flex;
     flex-flow: row nowrap;
-
+    
     border: gray dashed;
     background-color: aliceblue; 
 }
@@ -71,18 +91,20 @@ img {
 #infospace {
     display: flex;
     flex-flow: column nowrap;
-    width: 80%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 50vw;
+    padding-left: 10px;
+    min-height: 70vh;
+    padding-right: 10px;
 }
 
-#bottom {
+.bottom {
     display: flex;
     justify-content: center;
 
     color: white;
-    background-color: #44c767;
     padding-top: 10px;
     padding-bottom: 30px;
 }
