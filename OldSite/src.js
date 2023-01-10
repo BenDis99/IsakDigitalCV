@@ -1,3 +1,4 @@
+import { CategoryButton } from "./components/CategoryButton.js";
 import {db as dataDB} from "./data.js"
 
 const db = dataDB;
@@ -41,8 +42,8 @@ export function getData(i){
 function writeList(ls){
     var str = "";
     for(let i=0; i < ls.length; i++){
-        str += "<section><h2>" + ls[i].title + ",  " + ls[i].company + " | " + ls[i].time + "</h2>\n";
-        str += "<h3>" + ls[i].info + "</h3></section>\n<br>";
+        str += "<div><h2>" + ls[i].title + ",  " + ls[i].company + " | " + ls[i].time + "</h2>\n";
+        str += "<h3>" + ls[i].info + "</h3></div>\n<br>";
     }
     return str;
 }
@@ -65,23 +66,13 @@ function getAge(){
 
 
 const buttonContainer = document.getElementById("category_buttons");
-const button1 = document.createElement('button');
-button1.textContent = "Utdanning"
-button1.onclick = async () => getData(0);
-buttonContainer.appendChild(button1);
 
-const button2 = document.createElement('button');
-button2.textContent = "Jobb"
-button2.onclick = async () => getData(1);
-buttonContainer.appendChild(button2);
+buttonContainer.appendChild(CategoryButton({text: "Utdanning", onclick: async () => getData(0)}));
 
-const button3 = document.createElement('button');
-button3.textContent = "Programmeringsspråk"
-button3.onclick = async () => getData(3);
-buttonContainer.appendChild(button3);
+buttonContainer.appendChild(CategoryButton({text: "Jobb", onclick: async () => getData(1)}));
 
-const button4 = document.createElement('button');
-button4.textContent = "Om meg"
-button4.onclick = async () => getData(2);
-buttonContainer.appendChild(button4);
+buttonContainer.appendChild(CategoryButton({text: "Programmeringsspråk", onclick: async () => getData(3)}));
+
+buttonContainer.appendChild(CategoryButton({text: "Om meg", onclick: async () => getData(2)}));
+
 getData(0);

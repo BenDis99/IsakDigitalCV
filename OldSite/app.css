@@ -46,7 +46,7 @@ img {
     gap: 1rem;
 }
 
-button {
+.category_button {
     margin-top: 10px;
     margin-bottom: 10px;
 	background-color:#44c767;
@@ -63,7 +63,7 @@ button {
 	text-shadow:0px 1px 0px #2f6627;
 }
 
-button:hover {
+.category_button:hover {
 	background-color:#50ed7a;
 	transform: scale(1.1);
 }
