@@ -73,6 +73,6 @@ buttonContainer.appendChild(CategoryButton({text: "Jobb", onclick: async () => g
 
 buttonContainer.appendChild(CategoryButton({text: "Programmeringsspråk", onclick: async () => getData(3)}));
 
-buttonContainer.appendChild(CategoryButton({text: "Om meg", onclick: async () => getData(2)}));
+buttonContainer.appendChild(CategoryButton({text: "Om meg", onclick: async () => getData(2), href: "about.html"}));
 
 getData(0);
