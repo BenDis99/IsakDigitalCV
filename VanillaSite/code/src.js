@@ -67,12 +67,12 @@ function getAge(){
 
 const buttonContainer = document.getElementById("category_buttons");
 
-buttonContainer.appendChild(CategoryButton({text: "Utdanning", onclick: async () => getData(0)}));
+buttonContainer.appendChild(CategoryButton({text: "Utdanning", href: "education.html"}));
 
-buttonContainer.appendChild(CategoryButton({text: "Jobb", onclick: async () => getData(1)}));
+buttonContainer.appendChild(CategoryButton({text: "Jobb", href: "jobs.html"}));
 
-buttonContainer.appendChild(CategoryButton({text: "Programmeringsspråk", onclick: async () => getData(3)}));
+buttonContainer.appendChild(CategoryButton({text: "Programmeringsspråk", href: "programming.html"}));
 
-buttonContainer.appendChild(CategoryButton({text: "Om meg", onclick: async () => getData(2), href: "about.html"}));
+buttonContainer.appendChild(CategoryButton({text: "Om meg", href: "about.html"}));
 
 getData(0);
