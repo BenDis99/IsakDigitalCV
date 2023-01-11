@@ -106,3 +106,39 @@ export const db = {
     ],
     "about-db": "@Author Isak Hølleland, 16.Jan 2022"
 };
+
+export function getData(i){
+    switch(i){
+        case 0:
+            /// About education
+            return writeList(db.edu);
+        case 1:
+            /// About work
+            return writeList(db.xp);
+        case 2:
+            /// About me
+            return db;
+        case 3:
+            /// About my programming skills
+            return writeSimpleList("Programmeringsspråk", db.programmingLanguages);
+    }
+}
+
+
+
+function writeList(ls){
+    var str = "";
+    for(let i=0; i < ls.length; i++){
+        str += "<div><h2>" + ls[i].title + ",  " + ls[i].company + " | " + ls[i].time + "</h2>\n";
+        str += "<h3>" + ls[i].info + "</h3></div>\n<br>";
+    }
+    return str;
+}
+
+export function writeSimpleList(title,ls){
+    var str = "<h2>" + title + "</h2>\n";
+    for(let i=0; i < ls.length; i++){
+        str += "<h3>" + ls[i] + "</h3>\n";
+    }
+    return str;
+}
