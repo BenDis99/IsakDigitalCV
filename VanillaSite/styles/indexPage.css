@@ -7,8 +7,9 @@ body {
 
 }
 img {
-    width: 100px;
     animation: rotation 2s infinite linear;
+    width: 30vmin;
+    height: 30vmin;
 }
 @keyframes rotation {
     from {
