@@ -104,3 +104,17 @@ img {
     padding-top: 10px;
     padding-bottom: 30px;
 }
+
+.rotating_img {
+    animation: rotation 3s infinite linear;
+    width: 30vmin;
+    height: 30vmin;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

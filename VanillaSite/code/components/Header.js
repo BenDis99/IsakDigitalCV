@@ -7,6 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
         <header>
             <nav id="category_buttons">
+                <a class="category_button" href="dashboard.html">Hjem</a>
                 <a class="category_button" href="education.html">Utdanning</a>
                 <a class="category_button" href="jobs.html">Jobberfaring</a>
                 <a class="category_button" href="programming.html">Programmering</a>
