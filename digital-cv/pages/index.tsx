@@ -22,10 +22,10 @@ export default function Home(props:{welcomeInformation : WelcomeInformation, job
 export async function getServerSideProps() {
   const welcomeInformation = await client.fetch(
     `*[_type == "welcomeInformation"][0]`
-  )
-  const jobs : any[] = await client.fetch(
+  ) as WelcomeInformation
+  const jobs = await client.fetch(
     `*[_type == "jobInformation"]`
-  )
+  ) as JobInformation[]
   return {
     props: {
       welcomeInformation,
