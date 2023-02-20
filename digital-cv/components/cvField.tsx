@@ -3,10 +3,6 @@ import styles from "../styles/cvField.module.css"
 
 const CvField = (props:{jobs:JobInformation[]}) => {
     const {jobs} = props;
-    let key = 1873;
-    const getKey = () => {
-        return key++;
-    }
     return (
         <div className={styles.cv_field}>
             <dl>
@@ -18,5 +14,6 @@ const CvField = (props:{jobs:JobInformation[]}) => {
         </div>
         )
 }
+
 
 export default CvField;

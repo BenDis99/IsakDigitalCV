@@ -1,7 +1,6 @@
 import client from "../client";
 import CvField from "../components/cvField";
 import { JobInformation } from "../model/jobInformation";
-import { WelcomeInformation } from "../model/welcomeInformation";
 import styles from '../styles/Home.module.css'
 
 const Career = (props:{jobs : JobInformation[]}) => {

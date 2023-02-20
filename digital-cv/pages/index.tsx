@@ -1,18 +1,28 @@
 import client from '../client'
 import styles from '../styles/Home.module.css'
-import CvField from "../components/cvField";
 import { WelcomeInformation } from '../model/welcomeInformation';
-import { JobInformation } from '../model/jobInformation';
+import Image from 'next/image';
+import background from "../public/assets/dashboard_background.jpg";
 
 
 
 export default function Home(props:{welcomeInformation : WelcomeInformation}) {
   const {welcomeInformation} = props;
   return (
-    <div>
-      <h1 className={styles.title}>
-        {welcomeInformation.title}
-      </h1>
+    <div className={styles.content}>
+      <Image 
+        className={styles.background}
+        src={background}
+        alt="background">
+      </Image>
+      <div className={styles.page_content}>
+        <h1 className={styles.title}>
+          {welcomeInformation.title}
+        </h1>
+        <h3 className={styles.description}>
+          {welcomeInformation.description}
+        </h3>
+      </div>
     </div>
   )
 }
