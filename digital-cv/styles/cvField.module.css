@@ -13,3 +13,7 @@
     align-items: center;
     column-gap: 0;
 }
+
+.descriptionText {
+    margin-bottom: 1rem;
+}
