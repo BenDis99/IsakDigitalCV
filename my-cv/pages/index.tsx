@@ -3,10 +3,12 @@ import Image from 'next/image'
 import client from '../client'
 import styles from '../styles/Home.module.css'
 import CvField from "../components/cvField";
+import { WelcomeInformation } from '../model/welcomeInformation';
+import { JobInformation } from '../model/jobInformation';
 
 
 
-export default function Home(props:{welcomeInformation : any, jobs : any[]}) {
+export default function Home(props:{welcomeInformation : WelcomeInformation, jobs : JobInformation[]}) {
   const {welcomeInformation, jobs} = props;
   return (
     <div className={styles.container}>
@@ -21,8 +23,6 @@ export default function Home(props:{welcomeInformation : any, jobs : any[]}) {
         </h1>
         <CvField jobs={jobs}/>
       </main>
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
 }
