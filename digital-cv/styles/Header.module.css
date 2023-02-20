@@ -1,12 +1,50 @@
 .header {
-    background-color: rgb(215, 250, 227);
-    height: 25px;
+    --background-color : rgb(215, 250, 227);
+    background-color: var(--background-color);
     width: 100%;
+    height: 35px;
+    color: black;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: row;
 }
 .nav {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
-    color: black;
+    justify-content: flex-start;
+    height: 100%;
+    padding-right: 50px;
+}
+
+.subpage_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 125px;
+    font-size: 20px;
+    background-color: var(--background-color);
+}
+
+.subpage_link:hover {
+    font-size: 22px;
+    font-weight: 600;
+    filter: brightness(115%);
+    border-bottom: 1px solid blue;
+}
+
+
+.logo_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    padding: 3px;
+}
+
+.logo_image {
+    width: auto;
+    height: 100%;
 }
