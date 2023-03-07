@@ -1,0 +1,23 @@
+.svgImage{
+    width: 80%;
+    max-width: 800px;
+}
+.head {
+    fill: #d1a587
+}
+
+.upper_body {
+    fill: #eebb99;
+}
+
+.upper_body_fin {
+    fill: darkgreen;
+}
+
+.fin {
+    fill: green;
+}
+
+.fork {
+    fill: gold;
+}

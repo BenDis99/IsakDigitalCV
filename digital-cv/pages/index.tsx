@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import { WelcomeInformation } from '../model/welcomeInformation';
 import Image from 'next/image';
 import background from "../public/assets/dashboard_background.jpg";
+import Poseidon from '../components/illustartion/Poseidon';
 
 
 
@@ -22,6 +23,7 @@ export default function Home(props:{welcomeInformation : WelcomeInformation}) {
         <h3 className={styles.description}>
           {welcomeInformation.description}
         </h3>
+        <Poseidon />
       </div>
     </div>
   )

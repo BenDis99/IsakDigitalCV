@@ -1,18 +1,39 @@
 .header {
     --background-color : rgb(215, 250, 227);
+    position: static;
     background-color: var(--background-color);
     width: 100%;
     color: black;
     padding-bottom: 3px;
-    display: flex;
-    flex-direction: row;
 }
 .nav {
     display: flex;
     width: 100%;
+    max-width: 1400px;
     align-items: center;
     justify-content: flex-start;
     padding-right: 50px;
+}
+@media screen and (max-width: 600px) {
+    .nav{
+        display: none;
+    }
+}
+
+.nav_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 50px;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .nav_mobile{
+        display: flex;
+    }
 }
 
 .subpage_link {
@@ -22,7 +43,6 @@
     height: 35px;
     width: 125px;
     font-size: 20px;
-    background-color: var(--background-color);
 }
 
 .subpage_link:hover {
@@ -46,3 +66,10 @@
     width: auto;
     height: 100%;
 }
+
+.svg {
+    fill: black;
+    width: 300px;
+    height: 300px;
+}
+

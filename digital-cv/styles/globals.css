@@ -1,3 +1,7 @@
+:root {
+  --breakpoint-mobile : 600px;
+}
+
 html,
 body {
   padding: 0;
