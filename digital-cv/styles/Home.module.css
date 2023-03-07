@@ -1,6 +1,11 @@
 .main {
   --content_size: calc(100vh - 73px);
   min-height: var(--content_size);
+  display: flex;
+  justify-content: center;
+}
+.main>*{
+  max-width: 1300px;
 }
 
 .content {
