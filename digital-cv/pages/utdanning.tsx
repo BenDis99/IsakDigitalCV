@@ -1,9 +1,11 @@
+import CenteredPageContainer from "../components/pageContainers/centeredPageContainer";
+
 const Education = () => {
 
     return (
-        <div>
+        <CenteredPageContainer>
             THis is education
-        </div>
+        </CenteredPageContainer>
     )
 }
 export default Education;

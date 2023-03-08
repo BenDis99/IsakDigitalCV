@@ -1,11 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
 .page {
-    max-width: var(--content_max_width);
     display: flex;
     flex-flow: row wrap;
-    margin-top: 10px;
     justify-content: center;
     align-content: flex-start;
 }
