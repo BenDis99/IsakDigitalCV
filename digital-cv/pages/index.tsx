@@ -4,28 +4,25 @@ import { WelcomeInformation } from '../model/welcomeInformation';
 import Image from 'next/image';
 import background from "../public/assets/dashboard_background.jpg";
 import Poseidon from '../components/illustartion/Poseidon';
+import CenteredPageContainer from '../components/pageContainers/centeredPageContainer';
 
 
 
 export default function Home(props:{welcomeInformation : WelcomeInformation}) {
   const {welcomeInformation} = props;
   return (
-    <div className={styles.content}>
-      <Image 
-        className={styles.background}
-        src={background}
-        alt="background">
-      </Image>
-      <div className={styles.page_content}>
-        <h1 className={styles.title}>
-          {welcomeInformation.title}
-        </h1>
-        <h3 className={styles.description}>
-          {welcomeInformation.description}
-        </h3>
-        <Poseidon />
-      </div>
-    </div>
+    <CenteredPageContainer
+      background={background}
+      blur={true}
+    >
+      <h1 className={styles.title}>
+        {welcomeInformation.title}
+      </h1>
+      <h3 className={styles.description}>
+        {welcomeInformation.description}
+      </h3>
+      <Poseidon />
+    </CenteredPageContainer>
   )
 }
 export async function getServerSideProps() {

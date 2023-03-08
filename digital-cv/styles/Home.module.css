@@ -1,38 +1,3 @@
-.main {
-  --content_size: calc(100vh - 73px);
-  min-height: var(--content_size);
-  display: flex;
-  justify-content: center;
-}
-.main>*{
-  max-width: 1300px;
-}
-
-.content {
-  position: relative;
-}
-
-
-.background {
-  position: absolute;
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: var(--content_size);
-}
-
-.page_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  backdrop-filter: blur(6px);
-
-  padding-bottom: 200px;
-  height: var(--content_size);
-}
-
 .title {
   margin: 0;
   line-height: 1.15;

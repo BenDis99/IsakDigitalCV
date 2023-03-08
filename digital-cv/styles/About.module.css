@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 .page {
+    max-width: var(--content_max_width);
     display: flex;
     flex-flow: row wrap;
     margin-top: 10px;
+    justify-content: center;
     align-content: flex-start;
 }
 
@@ -21,11 +23,19 @@
     line-height: 80px;
     font-size: 80px;
 }
+
 .h2{
     margin-top: -70px;
     line-height: 80px;
     font-size: 40px;
 }
+
+.p{
+    margin-top: -70px;
+    line-height: 80px;
+    font-size: 24px;
+}
+
 .font_BebasNeue {
     font-family: 'Bebas Neue', cursive;
 }

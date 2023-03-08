@@ -1,5 +1,7 @@
 :root {
   --breakpoint-mobile : 600px;
+  --content_size: calc(100vh - 73px);
+  --content_max_width : 1300px;
 }
 
 html,
