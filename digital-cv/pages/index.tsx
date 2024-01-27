@@ -1,10 +1,9 @@
 import client from '../client'
 import styles from '../styles/Home.module.css'
 import { WelcomeInformation } from '../model/welcomeInformation';
-import Image from 'next/image';
 import background from "../public/assets/dashboard_background.jpg";
 import Poseidon from '../components/illustartion/Poseidon';
-import CenteredPageContainer from '../components/pageContainers/centeredPageContainer';
+import CenteredPageContainer from '../components/pageContainers/CenteredPageContainer';
 
 
 

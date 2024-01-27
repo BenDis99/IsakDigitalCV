@@ -1,7 +1,7 @@
 import styles from "../styles/About.module.css";
 import profilePic from "../public/assets/profile.jpg"
 import Image from "next/image";
-import CenteredPageContainer from "../components/pageContainers/centeredPageContainer";
+import CenteredPageContainer from '../components/pageContainers/CenteredPageContainer';
 
 const About = () => {
 

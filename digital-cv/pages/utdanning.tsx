@@ -1,4 +1,4 @@
-import CenteredPageContainer from "../components/pageContainers/centeredPageContainer";
+import CenteredPageContainer from '../components/pageContainers/CenteredPageContainer';
 
 const Education = () => {
 
