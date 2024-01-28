@@ -1,5 +1,5 @@
 import client from "../client";
-import CvField from "../components/CvField"
+import CvField from '../components/CvField';
 import CenteredPageContainer from '../components/pageContainers/CenteredPageContainer';
 import { JobInformation } from "../model/jobInformation";
 import styles from '../styles/Home.module.css'
