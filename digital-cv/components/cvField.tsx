@@ -6,10 +6,11 @@ const CvField = (props:{jobs:JobInformation[]}) => {
     return (
         <div className={styles.jobs_content}>
             <dl className={styles.jobs_list}>
-            {jobs.reverse().map(job => (<>
-                <dt>{`${job.jobTitle}, ${job.company} | ${!!job.timefrom ? job.timefrom : "now"} - ${!!job.timeto ? job.timeto : "now"}`}</dt>
-                <dd className={styles.descriptionText}>{job.jobDescription}</dd>
-            </>))}
+            {jobs.reverse().map(job => (
+                <div key={`${job.company}-${job.jobTitle}`}>
+                    <dt>{`${job.jobTitle}, ${job.company} | ${!!job.timefrom ? job.timefrom : "now"} - ${!!job.timeto ? job.timeto : "now"}`}</dt>
+                    <dd className={styles.descriptionText}>{job.jobDescription}</dd>
+                </div>))}
             </dl>
         </div>
         )
