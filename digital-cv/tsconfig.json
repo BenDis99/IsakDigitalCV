@@ -16,7 +16,5 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "selector": ["function", "objectLiteralProperty", "objectLiteralMethod"],
-  "format": ["PascalCase", "camelCase"]
+  "exclude": ["node_modules"]
 }
