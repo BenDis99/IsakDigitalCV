@@ -15,6 +15,4 @@ const CvField = (props:{jobs:JobInformation[]}) => {
         </div>
         )
 }
-
-
 export default CvField;
