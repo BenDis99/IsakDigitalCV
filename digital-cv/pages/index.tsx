@@ -1,9 +1,11 @@
 import client from '../client'
 import styles from '../styles/Home.module.css'
+import aboutStyles from "../styles/About.module.css";
 import { WelcomeInformation } from '../model/welcomeInformation';
 import background from "../public/assets/dashboard_background.jpg";
-import Poseidon from '../components/illustartion/Poseidon';
+import profilePic from "../public/assets/profile.jpg"
 import CenteredPageContainer from '../components/pageContainers/CenteredPageContainer';
+import Image from "next/image"
 
 
 
@@ -20,7 +22,7 @@ export default function Home(props:{welcomeInformation : WelcomeInformation}) {
       <h3 className={styles.description}>
         {welcomeInformation.description}
       </h3>
-      <Poseidon />
+      <Image className={aboutStyles.profileImage} src={profilePic} alt="picture of a lovely pal with glasses and a beard"/>
     </CenteredPageContainer>
   )
 }
